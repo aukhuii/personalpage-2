@@ -1,0 +1,159 @@
+/* Tệp CSS của Khui */
+@font-face {
+  font-family: "Chillax";
+  src: url("fonts/ChillaxVN-Variable.woff2") format("woff2"),
+       url("fonts/ChillaxVN-Variable.woff") format("woff");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chillax";
+  src: url("fonts/ChillaxVN-Italic.woff2") format("woff2"),
+       url("fonts/ChillaxVN-Italic.woff") format("woff");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #121212;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #111827;
+  --link: #2563eb;
+  --card: rgba(255,255,255,0.6);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c;
+    --text: #ececec;
+    --muted: #9ca3af;
+    --border: #1f2937;
+    --accent: #f9fafb;
+    --link: #60a5fa;
+    --card: rgba(17,24,39,0.4);
+  }
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Chillax", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.7;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Helpers */
+.container { max-width: 920px; margin: 0 auto; padding: 24px; }
+.stack { display: grid; gap: 24px; }
+.section { margin: 24px 0; }
+.card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  background: var(--card);
+  backdrop-filter: blur(4px);
+}
+
+a { color: var(--link); }
+hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+.skip {
+  position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip:focus { position: static; width: auto; height: auto; padding: 8px 12px; background: var(--link); color: #fff; border-radius: 8px; }
+
+/* Typography */
+h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 8px; }
+h2 { font-size: clamp(20px, 3.5vw, 28px); margin: 24px 0 8px; }
+h3 { font-size: clamp(18px, 3vw, 22px); margin: 20px 0 8px; }
+p { margin: 10px 0; }
+.lede, .lead { color: var(--muted); }
+
+/* Header / Nav */
+header { padding: 16px 0 0; }
+nav {
+  display: flex; gap: 12px; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 12px;
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); }
+.menu { display: flex; gap: 12px; }
+.menu a { text-decoration: none; color: var(--text); border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 14px; }
+.menu a:hover { background: var(--text); color: var(--bg); }
+
+/* Media */
+.media { border: 1px dashed var(--border); border-radius: 14px; padding: 12px; }
+.ratio { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; }
+.ratio iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Figure */
+figure { margin: 0; display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: center; }
+figure img { width: 200px; height: 200px; object-fit: cover; border-radius: 14px; border: 1px solid var(--border); }
+figcaption { color: var(--muted); font-size: 14px; }
+
+/* Footer */
+footer { text-align: center; color: var(--muted); padding: 24px 0 40px; }
+
+/* Landing page decorations */
+.bg-grid {
+  background:
+    radial-gradient(800px 600px at 10% 10%, rgba(37,99,235,0.06), transparent 60%),
+    radial-gradient(800px 600px at 90% 90%, rgba(99,102,241,0.06), transparent 60%),
+    var(--bg);
+}
+
+.hello {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* cột 1 là ảnh, cột 2 là chữ */
+  gap: 24px;
+  align-items: start;
+}
+
+.hello img {
+  width: 250px;             /* ảnh full cột 250px */
+  height: 200px;            /* tự co chiều cao */
+  border-radius: 12px;
+}
+
+.hello .text {
+  min-width: 0;            /* đảm bảo chữ co đúng */
+}
+
+
+/* CTA Button */
+.cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+  font-weight: 700;
+}
+.cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+.cta:active { transform: translateY(0); }
+
+/* Portfolio grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.project {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: var(--card);
+  display: grid;
+  gap: 8px;
+}
+.project h3 { margin: 0; font-size: clamp(16px, 2.6vw, 20px); }
+.project p { font-size: 14px; color: var(--muted); }
+.project a { justify-self: start; text-decoration: none; border: 1px solid var(--border); padding: 6px 10px; border-radius: 10px; }
+.project a:hover { background: var(--text); color: var(--bg); }
