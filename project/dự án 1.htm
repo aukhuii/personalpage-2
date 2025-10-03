@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Trang cá nhân | Kyle</title>
+  <meta name="description" content="Trang web cá nhân của Kyle: giới thiệu, dự án và âm nhạc yêu thích." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta property="og:title" content="Trang cá nhân | Kyle" />
+  <meta property="og:description" content="Giới thiệu bản thân, portfolio và những điều mình yêu thích." />
+  <meta property="og:image" content="https://i.pinimg.com/1200x/08/af/9f/08af9f528f52f15ea7a93d00b45e2069.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="png/255daa9f678d5bf947f75c7d96ab095e.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-grid">
+  <a class="skip" href="#main">Bỏ qua đến nội dung chính</a>
+  <header class="container">
+    <nav aria-label="Điều hướng chính">
+      <a class="brand" href="homepage.html">
+        <img src="https://i.pinimg.com/736x/a1/20/40/a120407ce9797f152b2f6b5a4164eb08.jpg" alt="Ảnh đại diện Kyle">
+        <strong>Kyle</strong>
+      </a>
+      <div class="menu" role="menubar" aria-label="Liên kết nhanh">
+        <a role="menuitem" href="#gioi-thieu">Introduce</a>
+        <a role="menuitem" href="#du-an">Socials</a>
+        <a role="menuitem" href="#am-nhac">Song</a>
+        <a role="menuitem" target="_blank" href="https://www.facebook.com/aukhuiiday" aria-label="Facebook">Facebook</a>
+      </div>
+    </nav>
+    <h1>Bonjour, mes amis!.</h1>
+    <p class="lede">Chào mừng đến với trang web cá nhân của mình!</p>
+  </header>
+
+  <main id="main" class="container stack">
+    <section class="section card" aria-labelledby="gioi-thieu">
+      <h2 id="gioi-thieu">Một số thông tin cơ bản</h2>
+      <div class="hello">
+      <figure>
+        <img src="https://i.pinimg.com/736x/4c/0f/0f/4c0f0ff95890d68426d62b816cd3f4b0.jpg" alt="pic">
+      </figure>
+      <div class="text">
+        <p><strong>Xin chào</strong>, mình tên là <del>Khôi</del> (biệt danh là <strong>Kyle</strong>).</p>
+        <p>Mình là một <strong>website developer</strong> và cũng là một <strong>freelancer</strong>.<br />
+          Công việc chủ yếu của mình là dịch truyện tranh thuê và làm một số công việc dịch thuật khác.</p>
+      </div>
+      </div>
+      <hr />
+      <h3>Tôi yêu cuộc sống</h3>
+      <p>Là một học sinh cuối cấp thì chắc khỏi phải nói, mọi người cũng biết là nó khó khăn tới mức nào rồi ha.</p>
+      <p>Dù gì thì tôi vẫn rảnh để ngồi đây làm cái website này. Trong lúc ngồi viết những dòng này là lúc mà tôi hạnh phúc nhất luôn ấy.
+        <br />Tôi có thể kể lể hết tất cả mọi thứ tồi tệ mà tôi gặp trong đời, <em>damn what a life</em>, right?</p>
+    </section>
+
+    <section class="section card" aria-labelledby="du-an">
+      <h2 id="du-an">My socials.</h2>
+      <div class="grid">
+        <article class="project">
+          <h3>Gihub</h3>
+          <p>Made this like a year ago. Yep it's been abandoned.</p>
+          <a href="https://www.roblox.com/games/10197639702/Hellbound-Closed" target="_blank" aria-label="Hellbound">Click!</a>
+        </article>
+        <article class="project">
+          <h3>Personal Facebook</h3>
+          <p>Inbox for work.</p>
+          <a href="https://www.facebook.com/aukhuiiday" target="_blank" aria-label="facebook">Click!</a>
+        </article>
+        <article class="project">
+          <h3>Work Facebook</h3>
+          <p>Trang FB dùng để cập nhật tình hình công việc.</p>
+          <a href="https://www.facebook.com/Kyle2047" target="_blank" aria-label="Bấm vào đi">Click!</a>
+        </article>
+        <article class="project">
+          <h3>My Roblox profile</h3>
+          <p>Follow now for free tixes!.</p>
+          <a href="https://www.roblox.com/users/1249753073/profile" target="_blank" aria-label="FUCK OFFF">Bấm!</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section card media" aria-labelledby="am-nhac">
+      <h2 id="am-nhac">Làm tí nhạc đi bạn, rồi mọi thứ sẽ ổn thôi</h2>
+      <div class="ratio" role="group" aria-label="YouTube player">
+        <iframe
+          src="https://www.youtube.com/embed/w8r5zDA4awM?rel=0"
+          title="YouTube video player"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="y"></span> Kyle • Yêu KPhương ❤️‍🔥
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
