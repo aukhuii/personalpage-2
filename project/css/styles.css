@@ -153,6 +153,45 @@ footer { text-align: center; color: var(--muted); padding: 24px 0 40px; }
   display: grid;
   gap: 8px;
 }
+/* Responsive cho mobile */
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+
+  .hello {
+    grid-template-columns: 1fr; /* ảnh và chữ xếp thành 1 cột */
+    gap: 16px;
+  }
+
+  .hello img {
+    width: 100%;      /* ảnh full chiều ngang */
+    height: auto;     /* giữ tỉ lệ */
+  }
+
+  h1 {
+    font-size: 24px;  /* giảm size tiêu đề */
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p, .lead {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .menu {
+    flex-wrap: wrap;        /* menu không bị tràn ra ngoài */
+    gap: 8px;
+  }
+
+  .menu a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
 .project h3 { margin: 0; font-size: clamp(16px, 2.6vw, 20px); }
 .project p { font-size: 14px; color: var(--muted); }
 .project a { justify-self: start; text-decoration: none; border: 1px solid var(--border); padding: 6px 10px; border-radius: 10px; }
